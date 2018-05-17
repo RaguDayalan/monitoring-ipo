@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\open-iconic-master\\font",
+    "\\src",
+    "\\src\\app"
   ],
-  "SelectedNode": "\\karma.conf.js",
+  "SelectedNode": "\\src\\app\\details.component.html",
   "PreviewInSolutionExplorer": false
 }
