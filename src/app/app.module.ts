@@ -8,15 +8,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SearchComponent } from './search.component';
 import { DetailsComponent } from './details.component';
+import { FileDetailsComponent } from './filedetails.component';
+import { OCDDetailsComponent } from './ocddetails.component';
+import { EventLinksComponent } from './eventlinks.component';
 import { MQDetailsComponent } from './mqdetails.component';
-
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'details', component: DetailsComponent },
-  { path: 'mqdetails', component: MQDetailsComponent } 
+  { path: 'mqdetails', component: MQDetailsComponent },
+  { path: 'filedetails', component: FileDetailsComponent },
+  { path: 'ocddetails', component: OCDDetailsComponent },
+  { path: 'eventlinks', component: EventLinksComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -25,7 +31,7 @@ const appRoutes: Routes = [
     appRoutes,
     { enableTracing: true } // <-- debugging purposes only
   )],
-  declarations: [AppComponent, HomeComponent, SearchComponent, DetailsComponent, MQDetailsComponent],
+  declarations: [AppComponent, HomeComponent, SearchComponent, DetailsComponent, FileDetailsComponent, OCDDetailsComponent, EventLinksComponent, MQDetailsComponent],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })

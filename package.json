@@ -8,8 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://github.com/RaguDayalan/monitoring-ipo.git && angular-cli-ghpages --branch gh-pages"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +26,7 @@
     "jquery": "^3.3.1",
     "rxjs": "^5.5.6",
     "tether": "^1.4.3",
+    "util": "^0.10.3",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

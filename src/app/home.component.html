@@ -1,70 +1,481 @@
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">IPO - Monitoring</h3>
+    <h3 class="card-title">IPO - Monitoring Dashboard</h3>
   </div>
   <div class="card-body">
     <div class="pull-right">
       <p>Monitoring all notifications from different source systems. Monitoring all notifications from different source systems. Monitoring all notifications from different source systems. Monitoring all notifications from different source systems.</p>
-      <div class="card-deck text-light">
-        <div class="card bg-secondary mb-3" style="max-width: 18rem;">
-          <p class="card-header card-title">MFT Files</p>
-          <div class="card-body">
-            <p class="card-text">###,### files processed so far</p>
-            <p class="card-text"><small class="card-text">Last updated 3 mins ago</small></p>
-            <a href="#" class="btn btn-primary">See MFT Files</a>
-          </div>
+      <div class="list-group">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" id="files-tab" data-toggle="tab" href="#files" role="tab" aria-controls="files" aria-selected="true">File Monitoring and Status Tracker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ocd-tab" data-toggle="tab" href="#ocd" role="tab" aria-controls="ocd" aria-selected="true">Application Reconcilement Tracker(OCD)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="events-tab" data-toggle="tab" href="#events" role="tab" aria-controls="events" aria-selected="true">Event Notifications</a>
+          </li>
+        </ul>        
+      </div>      
+    </div>
+    <div class="tab-content" id="hometab" style="padding-top:15px;font-size: 1.0rem;">      
+      <div class="tab-pane fade show active" id="files" role="tabpanel" aria-labelledby="files-tab">
+        <div style="max-height:300px;overflow: auto">
+          <table class="table table-striped table-sm table-responsive">
+            <thead class="bg-secondary dropdown text-white">
+              <tr>
+                <th scope="col"><select class="bg-secondary custom-select text-white"><option selected>Date Time</option></select></th>
+                <th scope="col" title="Entry Name">
+                  <select class="bg-secondary custom-select text-white">
+                    <option selected>Entry</option>
+                    <option value="1">1001</option>
+                    <option value="2">2001</option>
+                    <option value="3">2002</option>
+                    <option value="4">2003</option>
+                  </select>
+                </th>
+                <th scope="col">
+                  <select class="bg-secondary custom-select text-white">
+                    <option selected>Type</option>
+                    <option value="0">ATM</option>
+                    <option value="1">Mobile</option>
+                    <option value="2">VP/TCH</option>
+                    <option value="3">Teller</option>
+                    <option value="4">ITM</option>
+                  </select>
+                </th>
+                <th scope="col"><select class="bg-secondary custom-select text-white"><option selected>File Name</option></select></th>
+                <th scope="col"><select class="bg-secondary custom-select text-white"><option selected>Cycle</option></select></th>
+                <th scope="col"><select class="bg-secondary custom-select text-white"><option selected>Sort Pattern</option></select></th>
+                <th scope="col" title="Controlled Disbursement Indicator"><select class="bg-secondary custom-select text-white"><option selected>CDA</option></select></th>
+                <th scope="col" title="File Name Matched"><select class="bg-secondary custom-select text-white"><option selected>File Matched</option></select></th>
+                <th scope="col" title="Amount Matched"><select class="bg-secondary custom-select text-white"><option selected>Amout Matched</option></select></th>
+                <th scope="col" title="Extracted"><select class="bg-secondary custom-select text-white"><option selected>Extracted</option></select></th>
+                <th scope="col" title="Released"><select class="bg-secondary custom-select text-white"><option selected>Rel</option></select></th>
+                <th scope="col" title="Archived at Viewpointe"><select class="bg-secondary custom-select text-white"><option selected>Arch</option></select></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>ATM</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>Mobile</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>Viewpointe/TCH</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../mqdetails">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>Teller Connect</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>ITM</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>Viewpointe/TCH</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../mqdetails">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>Mobile</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:56</td>
+                <td><a class="card-link" routerLink="../details">1001</a></td>
+                <td>ATM</td>
+                <td class="break-text col-xs-4"><a class="card-link" routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
+                <td>4</td>
+                <td>220</td>
+                <td>N</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+                <td>Y</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="card bg-secondary mb-3" style="max-width: 18rem;">
-          <p class="card-header card-title">ICL Files</p>
-          <div class="card-body">
-            <p class="card-text">###,### files processed so far</p>
-            <p class="card-text"><small class="card-text">Last updated 3 mins ago</small></p>
-            <a href="#" class="btn btn-primary">See ICL Files</a>
-          </div>
+      </div>
+      <div class="tab-pane fade show" id="ocd" role="tabpanel" aria-labelledby="ocd-tab">
+        <div style="max-height:250px;overflow: auto">
+          <table class="table table-striped table-s">
+            <thead class="bg-secondary fixed text-white">
+              <tr>
+                <th class="dropdown-toggle">Date Time</th>
+                <th class="dropdown-toggle">File Name</th>
+                <th class="dropdown-toggle">File Size</th>
+                <th class="dropdown-toggle">Item Count</th>
+                <th class="dropdown-toggle">Total Amt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+              <tr>
+                <td>02/18/2018 10:47:12</td>
+                <td>CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</td>
+                <td>1234</td>
+                <td>12</td>
+                <td>$$$,$$$.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="card bg-secondary mb-3" style="max-width: 18rem;">
-          <p class="card-header card-title">ATM</p>
-          <div class="card-body">
-            <p class="card-text">###,### files processed so far</p>
-            <p class="card-text"><small class="card-text">Last updated 3 mins ago</small></p>
-            <a href="#" class="btn btn-primary">See ATM Files</a>
-          </div>
-        </div>
-        <div class="card bg-secondary mb-3" style="max-width: 18rem;">
-          <p class="card-header card-title">NDM Files</p>
-          <div class="card-body">
-            <p class="card-text">###,### files processed so far</p>
-            <p class="card-text"><small class="card-text">Last updated 3 mins ago</small></p>
-            <a href="#" class="btn btn-primary">See NDM Files</a>
+        <div class="card-deck" style="padding-top:10px">
+          <div class="card bg-secondary mb-3" style="max-width: 40%;">
+            <div class="card-header"><b>ORD Accumulated  as of EOD 10/05/2018 05:30:21</b></div>
+            <div class="card-body bg-light">
+              <p class="card-text">Accumulated ORD Totals: <span class="text-primary">2,581 Items</span> <b>|</b> Total  <span class="text-primary">84,963,922.00</span></p>
+              <p class="card-text">EOD ORD Deposit Totals: <span class="text-primary">0     Items</span> <b>|</b> Total  <span class="text-primary">0.00</span></p>
+              <p class="card-text">ORD Differences:        <span class="text-primary">0     Items</span> <b>|</b> Total  <span class="text-primary">0.00</span></p>
+            </div>
           </div>
         </div>
       </div>
-      <div style="padding:20px">
-        <p clas="font-weight-light">Search Hisory</p>
-        <table class="table table-bordered table-sm">
-          <thead class="thead-light">
-            <tr>
-              <th class="dropdown-toggle">Search Term</th>
-              <th class="dropdown-toggle">Action</th>
-              <th class="dropdown-toggle">Date Run</th>
-              <th class="dropdown-toggle">Filters</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>MFT Logs</td>
-              <td><a href="#">Rerun Search</a></td>
-              <td>03/10/2018</td>
-              <td>WorkFlow: MFT, Status: Processed</td>
-            </tr>
-            <tr>
-              <td>FRAMES Logs</td>
-              <td><a href="#">Rerun Search</a></td>
-              <td>03/10/2018</td>
-              <td>WorkFlow: FRAMES, Status: Processed</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="tab-pane fade show" id="events">
+        <div class="nav nav-pills rounded bg-secondary" id="v-pills-tab" role="tablist">
+          <a class="nav-link active text-white" id="cpcs-tab" data-toggle="pill" href="#cpcs" role="tab" aria-controls="cpcs" aria-selected="true">CPCS Notifications</a>
+          <a class="nav-link text-white" id="ccl-tab" data-toggle="pill" href="#ccl" role="tab" aria-controls="ccl" aria-selected="true">CCL Sends</a>
+          <a class="nav-link text-white" id="ecprin-tab" data-toggle="pill" href="#ecprin" role="tab" aria-controls="ecprin" aria-selected="true">ECPRIN (Returns)</a>
+          <a class="nav-link text-white" data-toggle="pill" href="#ecprout" role="tab" aria-controls="ecprout" aria-selected="true">ECPROUT (Returns)</a>
+          <a class="nav-link text-white" data-toggle="pill" href="#ftg" role="tab" aria-controls="ftg" aria-selected="true">FTG (Files Received/Sent)</a>
+          <a class="nav-link text-white" data-toggle="pill" href="#99m" role="tab" aria-controls="99m" aria-selected="true">99-M String Failures (from SUNR99M)</a>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active rounded" id="cpcs" role="tabpanel" aria-labelledby="cpcs-tab">
+              <div class="p-4">
+                <span class="text-info h6">CPCS TIMT Status: Active</span>
+                <table class="table table-striped">
+                  <thead class="bg-secondary text-white">
+                    <tr>
+                      <th class="dropdown-toggle">Event</th>
+                      <th class="dropdown-toggle">Sort Pattern</th>
+                      <th class="dropdown-toggle">Cycle</th>
+                      <th class="dropdown-toggle">Date Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Last CDA</td>
+                      <td>Y</td>
+                      <td>4</td>
+                      <td>02/18/2018 10:47:12</td>
+                    </tr>
+                    <tr>
+                      <td>Last ICL</td>
+                      <td>Y</td>
+                      <td>4</td>
+                      <td>02/18/2018 10:47:12</td>
+                    </tr>
+                    <tr>
+                      <td>EFUN File</td>
+                      <td>Y</td>
+                      <td>4</td>
+                      <td>02/18/2018 10:47:12</td>
+                    </tr>
+                    <tr>
+                      <td>Last 99-M</td>
+                      <td>Y</td>
+                      <td>4</td>
+                      <td>02/18/2018 10:47:12</td>
+                    </tr>
+                    <tr>
+                      <td>ICRE File</td>
+                      <td>Y</td>
+                      <td>4</td>
+                      <td>02/18/2018 10:47:12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="ccl" role="tabpanel" aria-labelledby="ccl-tab">
+              <div class="p-4">
+                <span class="text-info h6">CCL TIMT Status: Active</span>
+                <table class="table table-striped">
+                  <thead class="bg-secondary text-white">
+                    <tr>
+                      <th class="dropdown-toggle">Date Time</th>
+                      <th class="dropdown-toggle">Partner</th>
+                      <th class="dropdown-toggle">X1</th>
+                      <th class="dropdown-toggle">X2</th>
+                      <th class="dropdown-toggle">R1</th>
+                      <th class="dropdown-toggle">R2</th>
+                      <th class="dropdown-toggle">Count</th>
+                      <th class="dropdown-toggle">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>02/18/2018 10:47:12</td>
+                      <td>FRB</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>26,324</td>
+                      <td>43,718,103.22</td>
+                    </tr>
+                    <tr>
+                      <td>02/18/2018 10:47:12</td>
+                      <td>WFC</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>26,324</td>
+                      <td>8,718,103.22</td>
+                    </tr>
+                    <tr>
+                      <td>02/18/2018 10:47:12</td>
+                      <td>STI</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>26,324</td>
+                      <td>10,718,103.22</td>
+                    </tr>
+                    <tr>
+                      <td>02/18/2018 10:47:12</td>
+                      <td>PAL</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>26,324</td>
+                      <td>48,103.22</td>
+                    </tr>
+                    <tr>
+                      <td>02/18/2018 10:47:12</td>
+                      <td>USB</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>Y</td>
+                      <td>26,324</td>
+                      <td>95,653.02</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="ecprin" role="tabpanel" aria-labelledby="ecprin-tab">
+              <div class="p-4">
+                <span class="text-info h6">ECPRIN Status: Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

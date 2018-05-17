@@ -1,76 +1,89 @@
-<div class="card">
-  <div class="card-header">
-    <h3 class="card-title">IPO - Monitoring</h3>
-  </div>
-  <div class="card-body">
-    <div class="pull-right">
-      <p>Monitoring all notifications from different source systems. Monitoring all notifications from different source systems. Monitoring all notifications from different source systems. Monitoring all notifications from different source systems.</p>
-      <ul class="pagination pagination-sm dropright">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item"><a class="page-link" href="#">..</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th class="dropdown-toggle">Date</th>
-            <th class="dropdown-toggle">Workflow</th>
-            <th class="dropdown-toggle">File Name</th>
-            <th class="dropdown-toggle">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-success">
-            <td>02/18/2018</td>
-            <td>FRAMES</td>
-            <td><a routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>Processed</td>
-          </tr>
-          <tr class="table-active">
-            <td>02/18/2018</td>
-            <td>OCD</td>
-            <td><a routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>In-Progress</td>
-          </tr>
-          <tr class="table-success">
-            <td>02/17/2018</td>
-            <td>ITM</td>
-            <td><a routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>Processed</td>
-          </tr>
-          <tr class="table-success">
-            <td>02/19/2018</td>
-            <td>FRAMES</td>
-            <td><a routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>Processed</td>
-          </tr>
-          <tr class="table-danger">
-            <td>02/17/2018</td>
-            <td>ATM</td>
-            <td><a routerLink="../details">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>Failed</td>
-          </tr>
-          <tr class="table-active">
-            <td>02/16/2018</td>
-            <td>MQ Tracking</td>
-            <td><a routerLink="../mqdetails">CCD.STI.BRCL01.D171214.S01960.T2141.IRDP.ECPI</a></td>
-            <td>In-Progress</td>
-          </tr>
-        </tbody>
-      </table>
-      <div>
-        <select>
-          <option value="items">Items</option>
-          <option value="10">10</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
+<nav class="navbar navbar-expand bg-light">
+  <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
+  <select class="form-control mr-sm-3 dropdown-menu-right" style="max-width:150px">
+    <option>Filter...</option>
+    <option>Today</option>
+    <option>Current Week</option>
+    <option>Current Month</option>
+    <option>Current Year</option>
+    <option>Choose Date</option>
+  </select>
+  <button class="btn btn-outline-success my-2 my-sm-0" routerLink="search" type="submit">Search</button>
+</nav>
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-light p-4">
+      <h4>Advance Filter</h4>
+      <div class="form-horizontal row">
+        <div class="form-group col-sm-2">
+          <label for="location1" class="control-label">Workflow</label>
+          <select class="form-control" name="" id="location1">
+            <option value="">Any</option>
+            <option value="">ICL File Rename</option>
+            <option value="">FANS</option>
+            <option value="">ATM</option>
+            <option value="">ITM</option>
+            <option value="">Teller</option>
+            <option value="">MQ</option>
+          </select>
+        </div>
+        <div class="form-group col-sm-2">
+          <label for="type1" class="control-label">Status</label>
+          <select class="form-control" name="" id="type1">
+            <option value="">Any</option>
+            <option value="">Processed</option>
+            <option value="">In-Progress</option>
+            <option value="">Failed</option>>
+          </select>
+        </div>
+        <div class="form-group col-sm-2">
+          <label for="pricefrom" class="control-label">Start Date</label>
+          <div class="input-group">
+            <div class="input-group-addon" id="basic-addon1">#</div>
+            <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1" value="mm/dd/yyyy">
+          </div>
+        </div>
+        <div class="form-group col-sm-2">
+          <label for="priceto" class="control-label">End Date</label>
+          <div class="input-group">
+            <div class="input-group-addon" id="basic-addon2">#</div>
+            <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1" value="mm/dd/yyyy">
+          </div>
+        </div>
       </div>
+      <p class="text-left"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add to Search</button> </p>
     </div>
   </div>
+  <nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+<div style="padding:20px">
+  <p clas="font-weight-light">Search Hisory</p>
+  <table class="table table-bordered table-sm">
+    <thead class="thead-light">
+      <tr>
+        <th class="dropdown-toggle">Search Term</th>
+        <th class="dropdown-toggle">Action</th>
+        <th class="dropdown-toggle">Date Run</th>
+        <th class="dropdown-toggle">Filters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MFT Logs</td>
+        <td><a href="#">Rerun Search</a></td>
+        <td>03/10/2018</td>
+        <td>WorkFlow: MFT, Status: Processed</td>
+      </tr>
+      <tr>
+        <td>FRAMES Logs</td>
+        <td><a href="#">Rerun Search</a></td>
+        <td>03/10/2018</td>
+        <td>WorkFlow: FRAMES, Status: Processed</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

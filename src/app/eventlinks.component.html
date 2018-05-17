@@ -1,0 +1,157 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">IPO - Monitoring Dashboard</h3>
+  </div>
+  <div class="card-body">
+    <div class="pull-right">
+      <p class="card-header bg-secondary text-white">Events Display</p>
+      <div class="list-group">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" id="cpcs-tab" data-toggle="tab" href="#cpcs" role="tab" aria-controls="cpcs" aria-selected="true">CPCS Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ccl-tab" data-toggle="tab" href="#ccl" role="tab" aria-controls="ccl" aria-selected="true">CCL Sends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ecprin-tab" data-toggle="tab" href="#ecprin" role="tab" aria-controls="ecprin" aria-selected="true">ECPRIN (Returns)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ECPROUT (Returns)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FTG (Files Received/Sent)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">99-M String Failures (from SUNR99M)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="tabContent">
+        <div class="tab-pane fade show active" id="cpcs" role="tabpanel" aria-labelledby="cpcs-tab">
+          <div class="p-4">
+            <span class="text-info h6">CPCS TIMT Status: Active</span>
+            <table class="table table-striped">
+              <thead class="bg-secondary">
+                <tr>
+                  <th class="dropdown-toggle">Event</th>
+                  <th class="dropdown-toggle">Sort Pattern</th>
+                  <th class="dropdown-toggle">Cycle</th>
+                  <th class="dropdown-toggle">Date Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Last CDA</td>
+                  <td>Y</td>
+                  <td>4</td>
+                  <td>02/18/2018 10:47:12</td>
+                </tr>
+                <tr>
+                  <td>Last ICL</td>
+                  <td>Y</td>
+                  <td>4</td>
+                  <td>02/18/2018 10:47:12</td>
+                </tr>
+                <tr>
+                  <td>EFUN File</td>
+                  <td>Y</td>
+                  <td>4</td>
+                  <td>02/18/2018 10:47:12</td>
+                </tr>
+                <tr>
+                  <td>Last 99-M</td>
+                  <td>Y</td>
+                  <td>4</td>
+                  <td>02/18/2018 10:47:12</td>
+                </tr>
+                <tr>
+                  <td>ICRE File</td>
+                  <td>Y</td>
+                  <td>4</td>
+                  <td>02/18/2018 10:47:12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="ccl" role="tabpanel" aria-labelledby="ccl-tab">
+          <div class="p-4">
+            <span class="text-info h6">CCL TIMT Status: Active</span>
+            <table class="table table-striped">
+              <thead class="bg-secondary">
+                <tr>
+                  <th class="dropdown-toggle">Date Time</th>
+                  <th class="dropdown-toggle">Partner</th>
+                  <th class="dropdown-toggle">X1</th>
+                  <th class="dropdown-toggle">X2</th>
+                  <th class="dropdown-toggle">R1</th>
+                  <th class="dropdown-toggle">R2</th>
+                  <th class="dropdown-toggle">Count</th>
+                  <th class="dropdown-toggle">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>02/18/2018 10:47:12</td>
+                  <td>FRB</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>26,324</td>
+                  <td>43,718,103.22</td>
+                </tr>
+                <tr>
+                  <td>02/18/2018 10:47:12</td>
+                  <td>WFC</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>26,324</td>
+                  <td>8,718,103.22</td>
+                </tr>
+                <tr>
+                  <td>02/18/2018 10:47:12</td>
+                  <td>STI</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>26,324</td>
+                  <td>10,718,103.22</td>
+                </tr>
+                <tr>
+                  <td>02/18/2018 10:47:12</td>
+                  <td>PAL</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>26,324</td>
+                  <td>48,103.22</td>
+                </tr>
+                <tr>
+                  <td>02/18/2018 10:47:12</td>
+                  <td>USB</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>Y</td>
+                  <td>26,324</td>
+                  <td>95,653.02</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade show" id="ecprin" role="tabpanel" aria-labelledby="ecprin-tab">
+          <div class="p-4">
+            <span class="text-info h6">ECPRIN Status: Active</span>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
